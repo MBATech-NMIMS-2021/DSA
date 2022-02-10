@@ -1,3 +1,5 @@
+// Deletion of element from the array
+
 #include <iostream>
 #include <vector>
 #include <string>

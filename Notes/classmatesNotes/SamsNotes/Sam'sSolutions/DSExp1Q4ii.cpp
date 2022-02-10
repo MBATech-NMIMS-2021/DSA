@@ -1,3 +1,5 @@
+// ii.	Find the sum and Average of all the elements of a 2-D array.
+
 #include<iostream>
 #include<vector>
 #include<string>

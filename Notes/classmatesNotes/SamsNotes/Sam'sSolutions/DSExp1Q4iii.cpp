@@ -1,3 +1,5 @@
+// Find highest and lowest element in a 1-D array.
+
 #include<iostream>
 #include<vector>
 #include<string>
