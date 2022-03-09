@@ -9,9 +9,9 @@ using namespace std;
 // Function to print the array
 void printArray(int arrayLength, int array[])
 {
-    for (int i = 0; i < arrayLength+1; i++)
+    for (int i = 0; i < arrayLength + 1; i++)
     {
-        cout << "The " << i << "th element of the array is: " << array[i]<<"\n";
+        cout << "The " << i << "th element of the array is: " << array[i] << "\n";
     }
 }
 
@@ -19,7 +19,8 @@ void printArray(int arrayLength, int array[])
 bool recursiveInsertion(int arrayLength, int *array, int insertElement, int index)
 {
     cout << "\nRunning for the " << index << "th index\n";
-    if (index == arrayLength+1)
+    //$ Breaking condition
+    if (index == arrayLength + 1)
     {
         printArray(arrayLength, array);
         return (false);
@@ -43,7 +44,10 @@ int main(void)
     // Creating an array through dynamic allocation
 
     int *array;
-    array = new int[arrayLength+5];
+
+    //$ Adding 5 to make space for the element that needs to get inserted
+
+    array = new int[arrayLength + 5];
 
     // Getting the elements of the array as input
 
