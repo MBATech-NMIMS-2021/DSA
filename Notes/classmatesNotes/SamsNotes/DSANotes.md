@@ -216,3 +216,85 @@ Types of linked lists:
 
 - Random access not allowed: We need to access the elements sequentially. Accessing any element, randomly is not possible. Hence binary search is also not possible in this case.
 - Extra memory space is required along with the element values in order to store the address to the next element.
+
+---
+
+**Note**: Singly linked list is same as the simple linked list we've leant above.
+
+---
+
+#### Doubly linked list
+
+---
+
+![Doubly linked list image](../../../images/doublyLinkedList.png)
+
+---
+
+- First element
+
+---
+
+```mermaid
+flowchart TB;
+node(Node) --> prevElem(NULL)
+node --> data(Data)
+node --> nextEle(Next element)
+```
+
+---
+
+- General elements
+
+---
+
+```mermaid
+flowchart TB;
+node(Node) --> prevEle(Previous element)
+node --> data(Data)
+node --> nextEle(Next element)
+```
+
+---
+
+- Last element
+
+---
+
+```mermaid
+flowchart TB;
+node(Node) --> prevEle(Previous element)
+node --> data(Data)
+node --> nextEle(NULL)
+```
+
+---
+
+- Visual representation of 3 element linked list
+
+---
+
+```mermaid
+flowchart TB;
+
+%% Node 1
+node1(Node 1) --> prevEle1(NULL)
+node1 --> data1(Data)
+node1 --> nextEle1 --> node2
+
+%% Node 2
+
+node2(Node 2) --> prevEle2 --> node1
+node2 --> data2(Data)
+node2 --> nextEle2 --> node3
+
+%% Node 3
+
+node3(Node 3) --> prevEle3;
+prevEle3 --> node2;
+node3 --> nextEle3(NULL);
+node3 --> data3(Data);
+```
+
+---
+
