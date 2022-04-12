@@ -227,6 +227,10 @@ Types of linked lists:
 
 ---
 
+![Circular linked list](../../../images/CircularLinkeList.png)
+
+---
+
 - Same as the singly linked list with an additional property that the first element's prev. element pointer now points to the last node except for NULL, and the last element's next element pointer now points to the first node.
 
 
