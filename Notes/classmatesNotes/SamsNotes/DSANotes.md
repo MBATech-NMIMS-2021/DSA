@@ -128,6 +128,10 @@ Types of linear data structures
 
 ---
 
+![Call center image](../../../images/callCenter.png)
+
+---
+
 ##### CPU task processing
 
 ---
@@ -141,3 +145,12 @@ Types of linear data structures
 ---
 
 ### Linked list
+
+---
+
+- Elements not stored in contiguous memory locations.
+- Elements linked using pointers
+
+---
+
+![Linked list image](../../../images/Linkedlist.png)
