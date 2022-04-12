@@ -347,3 +347,88 @@ node3 --> data3(Data);
 ---
 
 - Data is arranged in a hierarchial structure, tree like structure.
+
+---
+
+#### Terminologies
+
+---
+
+##### Root
+
+---
+
+- To topmost node from where the tree starts to expand.
+
+---
+
+```mermaid
+flowchart TB
+rt(Root) --> ele1(Node 1)
+rt --> ele2(Node 2)
+rt --> ele3(Node 3)
+```
+
+---
+
+##### Edge
+
+---
+
+- Link between 2 nodes is called an edge.
+
+---
+
+```mermaid
+flowchart TB
+rt(Root) --> |Edge1|ele1(Node 1)
+rt --> |Edge2|ele2(Node 2)
+rt --> |Edge3|ele3(Node 3)
+```
+
+---
+
+##### Child Node
+
+---
+
+- Node that has a parent node
+
+---
+
+```mermaid
+flowchart TB
+rt(Root, Parent node) --> |Edge1|ele1(Child node 1)
+rt --> |Edge2|ele2(Child node 2)
+rt --> |Edge3|ele3(Child node 3)
+```
+
+---
+
+##### Parent Node
+
+---
+
+- Node that has an edge to child node.
+
+---
+
+##### Leaf node
+
+---
+
+- Node that does not have a child node.
+
+---
+
+```mermaid
+flowchart TB
+rt(Root, Parent node) --> |Edge1|ele1(Child node 1)
+rt --> |Edge2|ele2(Child node 2)
+rt --> |Edge3|ele3[Leaf node 1]
+
+ele1 --> a[Leaf node 2]
+ele2 --> b[Leaf node 3]
+```
+
+---
