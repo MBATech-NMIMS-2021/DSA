@@ -432,3 +432,33 @@ ele2 --> b[Leaf node 3]
 ```
 
 ---
+
+##### Height of node
+
+---
+
+- Number of edges on longest path from that node to leaf node.
+- Height is always measured from bottom.
+
+---
+
+```mermaid
+flowchart TB
+rt(Root, Parent node) --> |Edge1|ele1(Target node)
+rt --> |Edge2|ele2(Child node 2)
+rt --> |Edge3|ele3[Leaf node 1]
+ele1 --> c(Child node)
+ele1 --> e(branch1 ele1)
+e --> f(ele2)
+f --> g(ele 3)
+c --> d(Leaf node)
+ele2 --> b[Leaf node 3]
+```
+
+---
+
+- Height of `target node` is 3 because 3 edges come till `ele 3` while only 2 edges till `Leaf node`
+
+---
+
+![Real height](../../../images/realHeight.webp)
