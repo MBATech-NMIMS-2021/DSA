@@ -223,6 +223,15 @@ Types of linked lists:
 
 ---
 
+#### Circular linked list
+
+---
+
+- Same as the singly linked list with an additional property that the first element's prev. element pointer now points to the last node except for NULL, and the last element's next element pointer now points to the first node.
+
+
+---
+
 #### Doubly linked list
 
 ---
@@ -298,3 +307,20 @@ node3 --> data3(Data);
 
 ---
 
+##### Advantages
+
+---
+
+- A DLL (Doubly Linked List) can be traversed in both the ways.
+- Deletion is quite efficient if the pointer to the element that needs to get deleted is given.
+- Insertion is also quite efficiently done.
+
+---
+
+##### Disadvantages
+
+---
+
+- Require more memory than linked list because every element now stores the address of next, as well as previous element.
+
+---
