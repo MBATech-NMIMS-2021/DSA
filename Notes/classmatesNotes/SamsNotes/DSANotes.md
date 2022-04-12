@@ -116,6 +116,42 @@ Types of linear data structures
 
 ---
 
+#### Terminologies
+
+---
+
+##### Enqueue
+
+---
+
+- To insert an element inside the queue
+
+---
+
+##### Dequeue
+
+---
+
+- To pop out an element from the queue.
+
+---
+
+##### Front
+
+---
+
+- Index to the front element of the queue.
+
+---
+
+##### Rear
+
+---
+
+- Index to the last element of the queue.
+
+---
+
 #### Applications
 
 ---
@@ -154,3 +190,29 @@ Types of linear data structures
 ---
 
 ![Linked list image](../../../images/Linkedlist.png)
+
+---
+
+Types of linked lists:
+
+1. Singly linked list
+2. Circular linked list
+3. Doubly linked list
+
+---
+
+#### Advantages (over arrays)
+
+---
+
+1. Size of array is generally fixed. In order to store elements without knowing the total elements that'll come in the array, just store them in a linked list.
+2. Insertion of elements in array is quite expensive. Because elements are stored in a contiguous block of memory, hence inserting a new element requires all the elements after that index to get shifted, which is becomes quite a big and inefficient job for insertion.
+
+---
+
+#### Disadvantages
+
+---
+
+- Random access not allowed: We need to access the elements sequentially. Accessing any element, randomly is not possible. Hence binary search is also not possible in this case.
+- Extra memory space is required along with the element values in order to store the address to the next element.
