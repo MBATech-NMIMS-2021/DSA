@@ -6,7 +6,7 @@
 
 ---
 
-- A data structure is a particular way of organizing data in the computer so that it can be used effectively.
+-   A data structure is a particular way of organizing data in the computer so that it can be used effectively.
 
 ---
 
@@ -23,14 +23,14 @@
 
 ---
 
-- Elements arranged in a sequence, one after the other.
+-   Elements arranged in a sequence, one after the other.
 
 Types of linear data structures
 
-- Arrays
-- Stacks
-- Queues
-- Linked lists
+-   Arrays
+-   Stacks
+-   Queues
+-   Linked lists
 
 ---
 
@@ -38,8 +38,8 @@ Types of linear data structures
 
 ---
 
-- Elements arranged in continuos memory.
-- All elements are of the same type.
+-   Elements arranged in continuos memory.
+-   All elements are of the same type.
 
 ---
 
@@ -55,7 +55,7 @@ Types of linear data structures
 
 ---
 
-- Compilers use stacks to figure out the value of expressions like `2 + 4 / 5 * (7 - 9)`
+-   Compilers use stacks to figure out the value of expressions like `2 + 4 / 5 * (7 - 9)`
 
 ---
 
@@ -63,7 +63,7 @@ Types of linear data structures
 
 ---
 
-- The back button saves all URL's we've visited in a stack.
+-   The back button saves all URL's we've visited in a stack.
 
 ---
 
@@ -71,6 +71,45 @@ Types of linear data structures
 
 ---
 
-- The last element that gets into the stack is removed first (**LIFO Principle**: Last in first out)
+-   The last element that gets into the stack is removed first (**LIFO Principle**: Last in first out)
 
 ---
+
+#### Terminologies
+
+---
+
+##### Push
+
+---
+
+-   To put the element inside the stack.
+
+---
+
+##### Pop
+
+---
+
+-   To remove an element from the stack. (Which is the last, recently inserted element)
+
+---
+
+##### Top
+
+---
+
+-   A variable to store the index value of the topmost element.
+
+---
+
+### Queues
+
+---
+
+![Queues image](../../../images/queue.png)
+
+---
+
+-   Works on the principle of first in first out (**FIFO**)
+-   So the first element that gets inside also becomes the first element to leave the queue.
