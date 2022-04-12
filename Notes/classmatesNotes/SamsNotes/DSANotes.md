@@ -328,3 +328,22 @@ node3 --> data3(Data);
 - Require more memory than linked list because every element now stores the address of next, as well as previous element.
 
 ---
+
+## Non-linear data structure
+
+---
+
+- Trees
+- Graphs
+
+---
+
+### Trees
+
+---
+
+![Real tree 😁](../../../images/realTree.jpg)
+
+---
+
+- Data is arranged in a hierarchial structure, tree like structure.
