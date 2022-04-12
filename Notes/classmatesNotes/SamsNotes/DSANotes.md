@@ -130,7 +130,14 @@ Types of linear data structures
 
 ##### CPU task processing
 
+---
+
 - Serving request on a single shared resource like printer, CPU task scheduling.
 
 ---
 
+![CPU silicon chip](../../../images/cpuChip.webp)
+
+---
+
+### Linked list
