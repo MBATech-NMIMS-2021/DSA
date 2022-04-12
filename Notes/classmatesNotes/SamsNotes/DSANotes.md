@@ -113,3 +113,24 @@ Types of linear data structures
 
 -   Works on the principle of first in first out (**FIFO**)
 -   So the first element that gets inside also becomes the first element to leave the queue.
+
+---
+
+#### Applications
+
+---
+
+##### Call centers
+
+---
+
+- To hold people calling them in order, until a service representative is free.
+
+---
+
+##### CPU task processing
+
+- Serving request on a single shared resource like printer, CPU task scheduling.
+
+---
+
