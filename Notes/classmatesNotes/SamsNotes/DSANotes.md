@@ -494,3 +494,87 @@ ele2 --> b[Leaf node 3]
 ---
 
 - Depth of `ele2` is 3.
+
+---
+
+#### Binary trees
+
+---
+
+- A binary tree is a tree data structure in which each node has **AT THE MOST** two children, which are referred to as the left child and the right child.
+
+---
+
+```mermaid
+flowchart TB
+rt(Root) --> ele1(Element 1)
+rt --> ele2(Element 2)
+
+ele1 --> ele11(Element 1's 1)
+ele1 --> ele12(Element 1's 2)
+
+ele2 --> ele21(Element 2's 1)
+```
+
+---
+
+##### Types of binary trees
+
+---
+
+###### Full binary tree
+
+---
+
+- Every node should have 0 or 2 children.
+
+---
+
+###### Complete binary tree
+
+---
+
+- A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left.
+
+---
+
+###### Complete BT Vs Full BT
+
+---
+
+- In a complete binary tree, 
+
+---
+
+1. All the leaf elements must lean towards the left.
+2. The last leaf element might not have a right sibling i.e. a complete binary tree doesn't have to be a full binary tree.
+
+---
+
+###### Perfect binary tree
+
+---
+
+- A Binary tree is a Perfect Binary Tree in which all the internal nodes have two children and all leaf nodes are at the same level.
+
+---
+
+```mermaid
+flowchart TB
+rt(Root) --> ele1(Element 1)
+rt --> ele2(Element 2)
+
+ele1 --> ele11(Element 1 1)
+ele1 --> ele12(Element 1 2)
+
+ele2 --> ele21(Element 2 1)
+ele2 --> ele22(ELement 2 1)
+```
+
+---
+
+###### Degenerate tree
+
+---
+
+- A tree where every internal node has 1 children.
