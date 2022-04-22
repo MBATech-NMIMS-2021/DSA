@@ -87,7 +87,9 @@ int main(void)
         if (optionSelected == '1')
         {
             callQueues.enqueue(callCounter++);
-        } else if (optionSelected == '2'){
+        }
+        else if (optionSelected == '2')
+        {
             callQueues.dequeue();
         }
     }
