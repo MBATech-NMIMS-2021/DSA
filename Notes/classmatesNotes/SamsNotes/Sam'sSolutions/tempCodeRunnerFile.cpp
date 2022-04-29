@@ -1,2 +1,2 @@
-cout << "\nProcessing...";
-            // cout << "\n======\nDEBUG INFO:\nelement to be inserted: " << element << "\nThe data in the current linked list: " << (*currentElement).data << "\nThe left pointer is " << (*currentElement).leftSubtree << "\nThe right pointer is " << (*currentElement).rightSubtree << endl;
+bstTraversal b(a.mainRootElement);
+    // b.inorderTraversal(a.mainRootElement);

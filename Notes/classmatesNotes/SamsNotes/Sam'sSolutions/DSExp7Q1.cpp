@@ -1,102 +1,140 @@
+//* Creating binary search tree
+
 #include <iostream>
 #include <vector>
 #include <string>
 
 using namespace std;
 
-//* Class to create nodes
-
 class Node
 {
+private:
+    bool dataManuallyEntered = false;
+
 public:
-    // Creating components of node
-
-    Node *leftNode = NULL;
+    Node *leftSubTree = NULL;
+    Node *rightSubTree = NULL;
     int data;
-    // This is a component in order to keep record whether the data in the node is a garbage value, or was manually entered
-    bool dataEntered = false;
-    Node *rightNode = NULL;
-
-    // Creating methods to CRUD Node
-
-    void createLeftNode()
+    void insertRootElement(int rootNodeData)
     {
-        (*this).leftNode = new Node;
-        // Setting the right node pointer of the new node to the current node
-        (*(*this).leftNode).rightNode = this;
-    }
-    void createRightNode()
-    {
-        this->rightNode = new Node;
-        // Setting the left node of the right node to be the current node
-        (*(*this).rightNode).leftNode = this;
-    }
-    /*
-    This is a function in order to put the data in current node
-    Return values:
-
-    - true: If the data didn't exist in the node, and has now been stored in that node
-    - false: If the data already existed in the node, hence updating the previously entered data has been denied
-
-    */
-    bool enterData(int data)
-    {
-        if (dataEntered)
+        if (this->dataManuallyEntered == false)
         {
-            return false;
+            cout << "\nElement " << rootNodeData << " entered into the bst, at address " << this << "\n";
+            this->data = rootNodeData;
         }
         else
         {
-            data = data;
-            dataEntered = true;
-            return true;
+            cout << "\nDenied pushing of " << rootNodeData << " at " << this << " because this has already been filled.\n";
+        }
+        this->dataManuallyEntered = true;
+    }
+    void createRightSubTree()
+    {
+        if (this->rightSubTree == NULL)
+        {
+            this->rightSubTree = new Node;
+            cout << "\nCreated a new right sub node, which has an address " << this->rightSubTree << "\n";
+        }
+        else
+        {
+            cout << "\nDenied to create a new node at right, because it has already been created.\n";
         }
     }
+    void createLeftSubTree()
+    {
+        if (this->leftSubTree == NULL)
+        {
+            this->leftSubTree = new Node;
+            cout << "\nCreated a new left sub node, which has an address " << this->leftSubTree << "\n";
+        }
+        else
+        {
+            cout << "\nDenied to create a new node at left, because it has already been created.\n";
+        }
+    }
+    void getNodeDesc()
+    {
+        cout << "\n\nHere's the description of this node: \nMemory address: " << this << "\nRoot element manually entered: " << this->dataManuallyEntered << "\nLeft node pointer: " << this->leftSubTree << "\nRight node pointer: " << this->rightSubTree << "\n\n";
+    }
+    bool dataEntered()
+    {
+        return this->dataManuallyEntered;
+    }
 };
-
-//* Class to create binary tree, and perform CRUD operations on it
 
 class binarySearchTree
 {
 private:
-    Node *rootNode = new Node;
-    Node *currentNode = rootNode;
+    Node *currentElement = mainRootElement;
 
 public:
-    void insertElement(int element)
+    Node *mainRootElement = new Node;
+    bool insertElement(int element)
     {
-        // If the current node's data is empty, then insert the element here
-        if ((*currentNode).enterData(element))
+        cout << "INserting...\n";
+        // If the data at the current node has not been set, then insert the data over here
+        if (currentElement->dataEntered() == false)
         {
-            cout << "\nElement inserted at the data portion of node at address " << currentNode;
+            currentElement->insertRootElement(element);
+            return true;
         }
+        // If the data has been set
         else
         {
-            // If was already there in the node, then update the current node, and perform recursion
-            if ((*currentNode).data > element)
+            // If the element is smaller than data at current node
+            if (currentElement->data > element)
             {
-                // Creating a left node
-                (*currentNode).createLeftNode();
-                // Let current node be the left node
-                currentNode = (*currentNode).leftNode;
-                insertElement(element);
+                // Insertion has to be obviously at the left position
+                // createLeftSubTree method only creates if the sub tree doesn't exist
+                currentElement->createLeftSubTree();
+                currentElement = currentElement->leftSubTree;
+                return insertElement(element);
             }
             else
             {
-                // Create a right node
-                (*currentNode).createRightNode();
-                // Let the current node be the right node
-                currentNode = (*currentNode).rightNode;
-                insertElement(element);
+                // Insertion at the right position
+                currentElement->createRightSubTree();
+                currentElement = currentElement->rightSubTree;
+                return insertElement(element);
             }
         }
     }
 };
+
+// class bstTraversal
+// {
+// private:
+//     Node *rootElement;
+
+// public:
+//     bstTraversal(Node *mainRootElement)
+//     {
+//         rootElement = mainRootElement;
+//     }
+//     void inorderTraversal(Node *operatingNode)
+//     {
+//         cout << "Traversing...";
+//         // Terminating condition
+//         if (operatingNode == NULL)
+//         {
+//         }
+//         else
+//         {
+//             inorderTraversal(operatingNode->leftSubTree);
+//             cout << operatingNode->data;
+//             inorderTraversal(operatingNode->rightSubTree);
+//         }
+//     }
+// };
 
 int main(void)
 {
     binarySearchTree a;
     a.insertElement(2);
+    a.insertElement(1);
     a.insertElement(3);
+    a.insertElement(5);
+    a.insertElement(4);
+    
     return 0;
 }
