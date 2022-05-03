@@ -25,7 +25,7 @@ public:
     }
     bool sortVector()
     {
-        cout << "\n\nSorting the "<< sortedIndex<<endl;
+        cout << "\n\nSorting the " << sortedIndex << endl;
         // Terminating condition
         if (sortedIndex == unsortedVector.size() - 1)
         {
